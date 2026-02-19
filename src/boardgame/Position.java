@@ -5,11 +5,11 @@ import java.util.Objects;
 public class Position {
 
 	private Integer row;
-	private Integer column;
-	public Position(Integer row, Integer column) {
+	private Integer columns;
+	public Position(Integer row, Integer columns) {
 		super();
 		this.row = row;
-		this.column = column;
+		this.columns = columns;
 	}
 	
 	public Integer getRow() {
@@ -18,16 +18,16 @@ public class Position {
 	public void setRow(Integer row) {
 		this.row = row;
 	}
-	public Integer getColumn() {
-		return column;
+	public Integer getColumns() {
+		return columns;
 	}
-	public void setColumn(Integer column) {
-		this.column = column;
+	public void setColumns(Integer columns) {
+		this.columns = columns;
 	}
 	
 	@Override
 	public int hashCode() {
-		return Objects.hash(column, row);
+		return Objects.hash(columns, row);
 	}
 	
 	@Override
@@ -39,12 +39,12 @@ public class Position {
 		if (getClass() != obj.getClass())
 			return false;
 		Position other = (Position) obj;
-		return Objects.equals(column, other.column) && Objects.equals(row, other.row);
+		return Objects.equals(columns, other.columns) && Objects.equals(row, other.row);
 	}
 
 	@Override
 	public String toString() {
-		return "Position [row=" + row + ", column=" + column + "]";
+		return "Position [row=" + row + ", column=" + columns + "]";
 	}
 	
 	
