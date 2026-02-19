@@ -25,6 +25,10 @@ public class Position {
 		this.columns = columns;
 	}
 	
+	public void setValues(int row, int column) {
+		this.row = row;
+		this.columns = column;
+	}
 	@Override
 	public int hashCode() {
 		return Objects.hash(columns, row);
